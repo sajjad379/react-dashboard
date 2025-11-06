@@ -1,0 +1,141 @@
+/* پس‌زمینه متحرک */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(270deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+  background-size: 800% 800%;
+  animation: gradientMove 15s ease infinite;
+  z-index: -1;
+}
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* تم‌ها */
+.app {
+  text-align: center;
+  min-height: 100vh;
+  transition: 0.5s;
+  color: #222;
+}
+.app.dark {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+}
+
+/* هدر */
+header {
+  padding: 20px;
+}
+.theme-btn {
+  background: #222;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+.theme-btn:hover { background: #444; }
+
+/* افکت تایپ */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #fff;
+  width: 22ch;
+  animation: typing 4s steps(22) 1s 1 normal both, blink 0.5s step-end infinite alternate;
+}
+@keyframes typing { from { width: 0; } to { width: 22ch; } }
+@keyframes blink { 50% { border-color: transparent; } }
+
+.container {
+  padding: 40px;
+  font-family: sans-serif;
+}
+
+input, textarea {
+  width: 80%;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 15px;
+  border: 2px solid #aaa;
+  outline: none;
+  resize: none;
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+input:focus, textarea:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 10px #2575fc;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+button {
+  background-color: #0078ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+}
+button:hover { background-color: #005fcc; }
+
+.display-box {
+  width: 80%;
+  min-height: 120px;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin: 20px auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.hint { opacity: 0.6; font-style: italic; }
+.fade-in { animation: fadeIn 0.6s ease-in; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.suggestion {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.mood {
+  font-size: 20px;
+  margin: 10px;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+.info {
+  margin-top: 15px;
+  font-size: 16px;
+}
+.copied {
+  color: limegreen;
+  font-weight: bold;
+  animation: blinkText 1s infinite alternate;
+}
+@keyframes blinkText {
+  from { opacity: 1; }
+  to { opacity: 0.4; }
+}
+
+footer {
+  margin-top: 30px;
+  opacity: 0.8;
+}
